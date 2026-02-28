@@ -138,6 +138,290 @@ message+=`Total: UGX ${document.getElementById('total').innerText}`;
 window.open(`https://wa.me/256779184613?text=${message}`,'_blank');}
   
 render();
+</<script>
+
+let cart=[];
+
+function addToCart(i){
+
+const qty=parseInt(document.getElementById('qty'+i).value);
+
+const existing=cart.find(c=>c.name===products[i].name);
+
+if(existing){
+existing.qty+=qty;
+}else{
+cart.push({...products[i],qty});
+}
+
+updateCart();
+}
+
+function updateCart(){
+
+const list=document.getElementById('cartItems');
+let total=0;
+list.innerHTML='';
+
+cart.forEach((c,index)=>{
+total+=c.price*c.qty;
+
+list.innerHTML+=`
+<li>
+${c.name} x ${c.qty}
+<button onclick="removeItem(${index})">❌</button>
+</li>`;
+});
+
+document.getElementById('total').innerText=total;
+}
+
+function removeItem(index){
+cart.splice(index,1);
+updateCart();
+}
+
+function checkout(){
+
+if(cart.length===0){
+alert("Cart is empty");
+return;
+}
+
+let customer=prompt("Enter Customer Name");
+
+if(!customer) return;
+
+let message="URBAN PLATE ORDER%0A";
+message+="Customer: "+customer+"%0A";
+message+="--------------------%0A";
+
+cart.forEach(c=>{
+message+=c.name+" x "+c.qty+"%0A";
+});
+
+message+="--------------------%0A";
+message+="Total: UGX "+document.getElementById('total').innerText;
+
+window.location.href=
+"https://wa.me/256779184613?text="+message;
+}
+
+render();
+
+</script><script>
+
+let cart=[];
+
+function addToCart(i){
+
+const qty=parseInt(document.getElementById('qty'+i).value);
+
+const existing=cart.find(c=>c.name===products[i].name);
+
+if(existing){
+existing.qty+=qty;
+}else{
+cart.push({...products[i],qty});
+}
+
+updateCart();
+}
+
+function updateCart(){
+
+const list=document.getElementById('cartItems');
+let total=0;
+list.innerHTML='';
+
+cart.forEach((c,index)=>{
+total+=c.price*c.qty;
+
+list.innerHTML+=`
+<li>
+${c.name} x ${c.qty}
+<button onclick="removeItem(${index})">❌</button>
+</li>`;
+});
+
+document.getElementById('total').innerText=total;
+}
+
+function removeItem(index){
+cart.splice(index,1);
+updateCart();
+}
+
+function checkout(){
+
+if(cart.length===0){
+alert("Cart is empty");
+return;
+}
+
+let customer=prompt("Enter Customer Name");
+
+if(!customer) return;
+
+let message="URBAN PLATE ORDER%0A";
+message+="Customer: "+customer+"%0A";
+message+="--------------------%0A";
+
+cart.forEach(c=>{
+message+=c.name+" x "+c.qty+"%0A";
+});
+
+message+="--------------------%0A";
+message+="Total: UGX "+document.getElementById('total').innerText;
+
+window.location.href=
+"https://wa.me/256779184613?text="+message;
+}
+
+render();
+
+<script>
+
+let cart=[];
+
+function addToCart(i){
+
+const qty=parseInt(document.getElementById('qty'+i).value);
+
+const existing=cart.find(c=>c.name===products[i].name);
+
+if(existing){
+existing.qty+=qty;
+}else{
+cart.push({...products[i],qty});
+}
+
+updateCart();
+}
+
+function updateCart(){
+
+const list=document.getElementById('cartItems');
+let total=0;
+list.innerHTML='';
+
+cart.forEach((c,index)=>{
+total+=c.price*c.qty;
+
+list.innerHTML+=`
+<li>
+${c.name} x ${c.qty}
+<button onclick="removeItem(${index})">❌</button>
+</li>`;
+});
+
+document.getElementById('total').innerText=total;
+}
+
+function removeItem(index){
+cart.splice(index,1);
+updateCart();
+}
+
+function checkout(){
+
+if(cart.length===0){
+alert("Cart is empty");
+return;
+}
+
+let customer=prompt("Enter Customer Name");
+
+if(!customer) return;
+
+let message="URBAN PLATE ORDER%0A";
+message+="Customer: "+customer+"%0A";
+message+="--------------------%0A";
+
+cart.forEach(c=>{
+message+=c.name+" x "+c.qty+"%0A";
+});
+
+message+="--------------------%0A";
+message+="Total: UGX "+document.getElementById('total').innerText;
+
+window.location.href=
+"https://wa.me/256779184613?text="+message;
+}
+
+render();
+
+<script>
+
+let cart=[];
+
+function addToCart(i){
+
+const qty=parseInt(document.getElementById('qty'+i).value);
+
+const existing=cart.find(c=>c.name===products[i].name);
+
+if(existing){
+existing.qty+=qty;
+}else{
+cart.push({...products[i],qty});
+}
+
+updateCart();
+}
+
+function updateCart(){
+
+const list=document.getElementById('cartItems');
+let total=0;
+list.innerHTML='';
+
+cart.forEach((c,index)=>{
+total+=c.price*c.qty;
+
+list.innerHTML+=`
+<li>
+${c.name} x ${c.qty}
+<button onclick="removeItem(${index})">❌</button>
+</li>`;
+});
+
+document.getElementById('total').innerText=total;
+}
+
+function removeItem(index){
+cart.splice(index,1);
+updateCart();
+}
+
+function checkout(){
+
+if(cart.length===0){
+alert("Cart is empty");
+return;
+}
+
+let customer=prompt("Enter Customer Name");
+
+if(!customer) return;
+
+let message="URBAN PLATE ORDER%0A";
+message+="Customer: "+customer+"%0A";
+message+="--------------------%0A";
+
+cart.forEach(c=>{
+message+=c.name+" x "+c.qty+"%0A";
+});
+
+message+="--------------------%0A";
+message+="Total: UGX "+document.getElementById('total').innerText;
+
+window.location.href=
+"https://wa.me/256779184613?text="+message;
+}
+
+render();
+
 </script>
 </body>
 </html>
